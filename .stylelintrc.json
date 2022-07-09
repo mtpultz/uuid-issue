@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "overrides": [
+    {
+      "files": ["./src/**/*.scss"]
+    }
+  ],
+  "rules": {
+    "scss/comment-no-empty": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "color-hex-length": null,
+    "color-named": [
+      "never",
+      {
+        "ignore": ["inside-function"]
+      }
+    ],
+    "selector-max-id": 0,
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep"]
+      }
+    ],
+    "max-nesting-depth": [
+      5,
+      {
+        "ignoreAtRules": ["include"]
+      }
+    ],
+    "no-empty-source": null
+  }
+}
